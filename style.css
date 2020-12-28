@@ -107,7 +107,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-blue);
+  background-color: #3b67db;
   padding: 5px;
 }
 
@@ -144,8 +144,8 @@ p {
   display: none;
 }
 
-/* Home */
-#Home {
+/* home */
+#home {
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
@@ -173,6 +173,7 @@ p {
   border: 2px solid white;
   border-radius: var(--size-border-radius);
 }
+
 
 /* Section common */
 .section {

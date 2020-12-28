@@ -15,14 +15,6 @@ document.addEventListener('scroll', () => {
   }
 });
 
-
-// Scroll function
-
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-};
-
 // Handle scrolling when tapping on the navbar menu
 
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -44,3 +36,21 @@ homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
 
+// Making home slowly fade to transparent as the window scrolls down
+
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll', () => {
+  // console.log(1 - window.scrollY / homeHeight);
+  // console.log(homeHeight);
+  home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+// Utility function
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+};
