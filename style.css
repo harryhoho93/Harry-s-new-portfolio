@@ -116,6 +116,7 @@ p {
 }
 
 .navbar__logo {
+  padding-left: 12px;
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
@@ -451,7 +452,7 @@ p {
 /* Contact */
 
 #contact {
-  background-color: var(--color-blue);
+  background-color: #3b67db;;
 }
 
 .contact__title, 
@@ -474,6 +475,25 @@ p {
   color: var(--color-dark-blue);
   transition: all var(--animation-duration) ease-in;
 }
+
+/* Arrow up */
+
+.arrow-up {
+  position: fixed;
+  bottom: 55px;
+  right: 50px;
+  font-size: 50px;
+  color: var(--color-black);
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+  pointer-events: auto;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: initial;
+}
+
 
 
 /* For below 768px screen width */
