@@ -138,7 +138,7 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
-  top: 22px;
+  top: 12px;
   right: 32px;
   font-size: 24px;
   color: var(--color-white);
@@ -353,6 +353,13 @@ p {
   display: flex;
   flex-wrap: warp;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px); 
 }
 
 .project {
@@ -404,6 +411,10 @@ p {
   margin-left: -12px;
   margin-top: 8px;
   background-color: var(--color-dark-grey);
+}
+
+.project.invisible {
+  display: none;
 }
 
 /* Testimonial */
